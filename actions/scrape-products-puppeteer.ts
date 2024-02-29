@@ -6,7 +6,7 @@ import { revalidatePath } from "next/cache";
 
 export async function scrapeOlxProducts(url: string) {
   try {
-    const browser = await puppeteer.launch({ headless: false });
+    const browser = await puppeteer.launch({ headless: "new" });
     const page = await browser.newPage();
     const navigationPromise = page.waitForNavigation({
       waitUntil: "networkidle0",
