@@ -10,7 +10,7 @@ const Products = () => {
       {products?.length > 0 ? (
         <div className="space-y-4">
           {products?.map((product: any, index: number) =>
-            product.title ? (
+            product?.title ? (
               <div
                 key={index}
                 className="border-4 border-neutral-200 bg-white p-5 rounded-lg"
