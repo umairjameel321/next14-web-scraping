@@ -18,7 +18,7 @@ export async function scrapeOlxProducts(url: string) {
     });
     await navigationPromise;
 
-    const isJQueryLoaded = await page.evaluate(() => !!window?.jQuery);
+    const isJQueryLoaded = await page.evaluate(() => !!(window as any)?.jQuery);
     if (!isJQueryLoaded) {
       throw new Error("jQuery not loaded");
     }
